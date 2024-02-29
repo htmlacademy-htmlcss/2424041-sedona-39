@@ -36,23 +36,36 @@
   --color-border: #e6e6e6;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   padding: 0 15px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: var(--color-basic);
 
   background-color: var(--color-background);
 }
 
 .page-wrapper {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   max-width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
 
+  background-color: var(--color-white);
   box-shadow: 0 0 15px 0 rgba(0,0,0, 0.12);
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -165,28 +178,24 @@ img {
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   padding: 0 70px;
 
   background-color: var(--color-white);
 }
 
 .nav {
-  position: relative;
   display: flex;
-
-  padding-left: 170px;
 }
 
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  margin-bottom: -10px;
+  margin-right: 28px;
 }
 
 .nav__pages {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 
@@ -201,10 +210,28 @@ img {
   font-weight: 700;
 }
 
+.nav__link--active {
+  position: relative;
+}
+
+.nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+
+  width: calc(100% - 32px);
+  height: 2px;
+
+  background-color: var(--color-button-basic);
+  transform: translateX(-50%);
+}
+
 .nav__user {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 172px;
 
   margin-right: 20px;
 }
@@ -275,7 +302,7 @@ img {
 }
 
 .advantages__box {
-  max-width: 651px;
+  max-width: 656px;
   margin: 0 auto;
   padding: 69px 0 90px;
 
@@ -323,11 +350,16 @@ img {
   flex-direction: row-reverse;
 }
 
+.advantages__card:first-child .advantages__card-title::after,
+.advantages__card:last-child .advantages__card-title::after {
+  background-color: var(--color-white);
+}
+
 .advantages__card-content {
   display: flex;
   flex-direction: column;
-  gap: 62px;
-  padding: 0 85px;
+  gap: 30px;
+  padding: 20px 85px;
 }
 
 .advantages__card-title,
@@ -340,6 +372,7 @@ img {
 
   max-width: 172px;
   margin: 0 auto;
+  margin-bottom: 32px;
 
   font-size: 24px;
   line-height: 28px;
@@ -352,17 +385,12 @@ img {
   position: absolute;
   height: 2px;
   width: 60px;
-  bottom: -31px;
+  bottom: -32px;
   left: 50%;
 
   background-color: rgba(0,0,0, 0.3);
 
-  transform: translate(-50%, -50%);
-}
-
-.advantages__card:first-child .advantages__card-title::after,
-.advantages__card:last-child .advantages__card-title::after {
-  background-color: var(--color-white);
+  transform: translateX(-50%);
 }
 
 .services__box {
@@ -380,15 +408,13 @@ img {
 .services__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .services__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   min-width: 400px;
   min-height: 385px;
-  padding: 81px 85px;
+  padding: 183px 85px 81px 85px;
 
   text-align: center;
 
@@ -411,10 +437,6 @@ img {
 
 .services__item--gift {
   background-image: url("../images/icons/advantage-gift-icon.svg");
-}
-
-.services__item-icon {
-  margin: 0 auto 26px;
 }
 
 .services__item-title,
@@ -561,7 +583,7 @@ img {
 .filter__wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 140px;
+  gap: 40px;
 }
 
 .filter__column {
@@ -579,10 +601,8 @@ img {
   font-weight: 700;
 }
 
-.filter__list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.filter__item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .filter__label {
@@ -645,7 +665,7 @@ img {
   position: relative;
 
   width: 143px;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
 
   line-height: 24px;
   font-weight: 700;
@@ -654,7 +674,6 @@ img {
 }
 
 .filter__price-input::placeholder {
-  font-weight: 700;
   color: var(--color-basic);
 }
 
@@ -664,7 +683,8 @@ img {
   right: 20px;
   z-index: 1;
 
-  color: black;
+  color: var(--color-basic);
+  opacity: 0.3;
 }
 
 .filter__price-range {
@@ -857,8 +877,7 @@ img {
 }
 
 .catalog__pagination-link {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
   padding: 12px 5px;
 
   font-size: 20px;
@@ -901,8 +920,9 @@ img {
 
 .footer__social-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 235px;
 }
 
 .footer__social-link {

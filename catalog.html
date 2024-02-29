@@ -13,7 +13,9 @@
     <div class="page-wrapper">
       <header class="header section">
         <nav class="nav">
-          <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип Sedona">
+          <a class="logo" href="index.html">
+            <img class="logo__img" src="images/logo.svg" width="140" height="70" alt="Логотип Sedona">
+          </a>
           <ul class="nav__pages list-reset">
             <li class="nav__pages-item">
               <a class="nav__link link-reset" href="index.html">Главная</a>
@@ -51,7 +53,7 @@
           </div>
         </nav>
       </header>
-      <main class="main-catalog">
+      <main class="main-container main-catalog">
         <section class="filter">
           <header class="filter__header">
             <h1 class="filter__title">Гостиницы Седоны</h1>
@@ -72,7 +74,7 @@
               </ul>
             </nav>
           </header>
-          <form class="filter__wrapper" method="post" action="https://echo.htmlacademy.ru">
+          <form class="filter__wrapper" method="get" action="https://echo.htmlacademy.ru">
             <div class="filter__column">
               <fieldset class="filter__infrastructure fieldset-reset">
                 <legend class="filter__options-title">Инфраструктура:</legend>
