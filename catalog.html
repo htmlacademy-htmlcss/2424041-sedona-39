@@ -24,7 +24,7 @@
               <a class="nav__link link-reset" href="#">О Седоне</a>
             </li>
             <li class="nav__pages-item">
-              <a class="nav__link nav__link--active link-reset" href="catalog.html">Гостиницы</a>
+              <a class="nav__link nav__link--active link-reset">Гостиницы</a>
             </li>
           </ul>
           <ul class="nav__user list-reset">
@@ -51,7 +51,7 @@
             </li>
           </ul>
           <div class="nav__modal-link-wrapper">
-            <a class="nav__modal-link button link-reset" href="#">Хочу сюда!</a>
+            <a class="nav__modal-link button link-button link-reset" href="#">Хочу сюда!</a>
           </div>
         </nav>
       </header>
@@ -72,7 +72,7 @@
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a class="breadcrumbs__link link-reset" href="#">Гостиницы</a>
+                  <a class="breadcrumbs__link breadcrumbs__link--active link-reset">Гостиницы</a>
                 </li>
               </ul>
             </nav>
@@ -83,25 +83,16 @@
                 <legend class="filter__options-title">Инфраструктура:</legend>
                 <ul class="filter__list list-reset">
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input checkbox-input" type="checkbox" checked>
-                      <span class="filter__check-box"></span>
-                      Бассейн
-                    </label>
+                    <input class="filter__input visually-hidden checkbox-input" type="checkbox" id="pool" checked>
+                    <label class="filter__label checkbox-label" for="pool">Бассейн</label>
                   </li>
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input checkbox-input" type="checkbox" checked>
-                      <span class="filter__check-box"></span>
-                      Парковка
-                    </label>
+                    <input class="filter__input visually-hidden checkbox-input" type="checkbox" id="parking" checked>
+                    <label class="filter__label checkbox-label" for="parking">Парковка</label>
                   </li>
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input checkbox-input" type="checkbox">
-                      <span class="filter__check-box"></span>
-                      Wi-Fi
-                    </label>
+                    <input class="filter__input visually-hidden checkbox-input" type="checkbox" id="wi-fi" checked>
+                    <label class="filter__label checkbox-label" for="wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
               </fieldset>
@@ -109,26 +100,16 @@
                 <legend class="filter__options-title">Тип Жилья:</legend>
                 <ul class="filter__list list-reset">
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input radio-input" type="radio" name="type-of-housing" value="hotel"
-                        checked>
-                      <span class="filter__radio-input"></span>
-                      Гостиница
-                    </label>
+                    <input class="filter__input visually-hidden radio-input" type="radio" name="type-of-housing" id="hotel" value="hotel" checked>
+                    <label class="filter__label radio-label" for="hotel">Гостиница</label>
                   </li>
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input radio-input" type="radio" name="type-of-housing" value="motel">
-                      <span class="filter__radio-input"></span>
-                      Мотель
-                    </label>
+                    <input class="filter__input visually-hidden radio-input" type="radio" name="type-of-housing" id="motel" value="motel">
+                    <label class="filter__label radio-label" for="motel">Мотель</label>
                   </li>
                   <li class="filter__item">
-                    <label class="filter__label">
-                      <input class="filter__input radio-input" type="radio" name="type-of-housing" value="apartments">
-                      <span class="filter__radio-input"></span>
-                      Апартаменты
-                    </label>
+                    <input class="filter__input visually-hidden radio-input" type="radio" name="type-of-housing" id="apartments" value="apartments">
+                    <label class="filter__label radio-label" for="apartments">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>
@@ -156,7 +137,7 @@
                     type="submit">Применить</button>
                 </li>
                 <li class="filter__buttons-item">
-                  <button class="filter__button filter__button--form-reset button button-reset"
+                  <button class="filter__button filter__button--form-reset button button--transparent button-reset"
                     type="reset">Сбросить</button>
                 </li>
               </ul>
@@ -175,8 +156,8 @@
             </div>
             <ul class="catalog__layout list-reset">
               <li class="catalog__layout-item">
-                <a class="catalog__layout-button catalog__layout-button--cards catalog__layout-button--active link-reset"
-                  href="#">
+                <a
+                  class="catalog__layout-button catalog__layout-button--cards catalog__layout-button--active link-reset">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
@@ -206,11 +187,18 @@
                   <span class="catalog__cards-price">От 4000 ₽</span>
                 </div>
                 <div class="catalog__cards-buttons">
-                  <a class="catalog__cards-button button" href="#">Подробнее</a>
-                  <button class="catalog__cards-button button button-reset" type="button">В избранное</button>
+                  <a class="catalog__cards-button button link-button" href="#">Подробнее</a>
+                  <button class="catalog__cards-button catalog__cards-button--favorite button button-reset"
+                    type="button">В избранное</button>
                 </div>
                 <div class="catalog__cards-rating">
-                  <div class="catalog__cards-rating-stars"></div>
+                  <span class="visually-hidden">4 звезды</span>
+                  <ul class="catalog__cards-rating-stars list-reset" aria-hidden="true">
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                  </ul>
                   <span class="catalog__cards-rating-number">Рейтинг: 8,5</span>
                 </div>
               </li>
@@ -225,12 +213,20 @@
                   <span class="catalog__cards-price">От 5000 ₽</span>
                 </div>
                 <div class="catalog__cards-buttons">
-                  <a class="catalog__cards-button button" href="#">Подробнее</a>
-                  <button class="catalog__cards-button catalog__cards-button--added button button-reset" type="button">В
+                  <a class="catalog__cards-button button link-button" href="#">Подробнее</a>
+                  <button
+                    class="catalog__cards-button catalog__cards-button--favorite catalog__cards-button--added button button-reset"
+                    type="button">В
                     избранном</button>
                 </div>
                 <div class="catalog__cards-rating">
-                  <div class="catalog__cards-rating-stars"></div>
+                  <span class="visually-hidden">4 звезды</span>
+                  <ul class="catalog__cards-rating-stars list-reset" aria-hidden="true">
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                  </ul>
                   <span class="catalog__cards-rating-number">Рейтинг: 9,2</span>
                 </div>
               </li>
@@ -245,11 +241,17 @@
                   <span class="catalog__cards-price">От 2500 ₽</span>
                 </div>
                 <div class="catalog__cards-buttons">
-                  <a class="catalog__cards-button button" href="#">Подробнее</a>
-                  <button class="catalog__cards-button button button-reset" type="button">В избранное</button>
+                  <a class="catalog__cards-button button link-button" href="#">Подробнее</a>
+                  <button class="catalog__cards-button catalog__cards-button--favorite button button-reset"
+                    type="button">В избранное</button>
                 </div>
                 <div class="catalog__cards-rating">
-                  <div class="catalog__cards-rating-stars"></div>
+                  <span class="visually-hidden">3 звезды</span>
+                  <ul class="catalog__cards-rating-stars list-reset" aria-hidden="true">
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                  </ul>
                   <span class="catalog__cards-rating-number">Рейтинг: 6,9</span>
                 </div>
               </li>
@@ -264,11 +266,16 @@
                   <span class="catalog__cards-price">От 1500 ₽</span>
                 </div>
                 <div class="catalog__cards-buttons">
-                  <a class="catalog__cards-button button" href="#">Подробнее</a>
-                  <button class="catalog__cards-button button button-reset" type="button">В избранное</button>
+                  <a class="catalog__cards-button button link-button" href="#">Подробнее</a>
+                  <button class="catalog__cards-button catalog__cards-button--favorite button button-reset"
+                    type="button">В избранное</button>
                 </div>
                 <div class="catalog__cards-rating">
-                  <div class="catalog__cards-rating-stars"></div>
+                  <span class="visually-hidden">2 звезды</span>
+                  <ul class="catalog__cards-rating-stars list-reset" aria-hidden="true">
+                    <li class="catalog__cards-rating-stars-item"></li>
+                    <li class="catalog__cards-rating-stars-item"></li>
+                  </ul>
                   <span class="catalog__cards-rating-number">Рейтинг: 5,0</span>
                 </div>
               </li>
@@ -315,7 +322,8 @@
         <address class="footer__social">
           <ul class="footer__social-list list-reset">
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://vk.com/htmlacademy">
+              <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">Наша группа во Вконтакте</span>
                 <svg class="footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="25" height="15">
@@ -326,7 +334,7 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://t.me/htmlacademy">
+              <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">Наш Телеграмм</span>
                 <svg class="footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="18" height="16">
@@ -336,7 +344,8 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">Наш ютуб-канал</span>
                 <svg class="footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="23" height="18">
