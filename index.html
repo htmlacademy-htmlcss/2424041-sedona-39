@@ -171,7 +171,8 @@
             </p>
             <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email">Ваш e-mail</label>
-              <input class="subscribe__input input-reset" type="email" placeholder="Ваш e-mail" id="email" name="email" required>
+              <input class="subscribe__input input-reset" type="email" placeholder="Ваш e-mail" id="email" name="email"
+                required>
               <button class="subscribe__button button button-reset" type="submit">Подписаться</button>
             </form>
           </div>
@@ -235,73 +236,84 @@
             </svg>
           </button>
           <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
-            <label class="modal__form-label modal__form-label--date">
-              Дата Заезда:
-              <div class="modal__form-input-wrapper">
-                <input class="modal__form-input input-reset" type="date" name="date-of-checkin" placeholder="27 апреля 2020" required>
-                <span class="modal__form-input-message modal__form-input-message--alert">Мы не можем отправить вас в прошлое.</span>
-              </div>
-            </label>
-            <label class="modal__form-label modal__form-label--date">
-              Дата Выезда:
-              <div class="modal__form-input-wrapper">
-                <input class="modal__form-input input-reset" type="date" name="date-of-checkout" placeholder="1 сентября 2021" required>
-                <span class="modal__form-input-message">На эти даты есть свободные номера. Пока есть.</span>
-              </div>
-            </label>
-            <div class="modal__form-box">
-              <div class="modal__line-wrapper">
-                <div class="modal__label-wrapper">
-                  <label class="modal__form-label" for="count-of-adult">Взрослые:</label>
-                </div>
-                <div class="modal__form-counter-wrapper">
-                  <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
-                    type="button">
-                    <span class="visually-hidden">Уменьшить количество</span>
-                  </button>
-                  <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
-                    value="2" id="count-of-adult" name="count-of-adult">
-                  <button class="modal__form-counter-button modal__form-counter-button--add button-reset" type="button">
-                    <span class="visually-hidden">Увеличить количество</span>
-                    <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="modal__line-wrapper">
-                <div class="modal__label-wrapper">
-                  <label class="modal__form-label" for="count-of-children">
-                    Дети:
-                  </label>
-                  <span class="modal__tooltip">
-                    <button class="modal__toopltip-button button-reset" type="button" aria-labelledby="tooltip-content">
-                      <svg class="modal__toopltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
-                      </svg>
-                    </button>
-                    <span class="modal__tooltip-content" role="tooltip" id="tooltip-content">
-                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
-                      размещаются бесплатно.
-                    </span>
+            <div class="modal__form-inner">
+              <div class="modal__form-date-line-wrapper">
+                <label class="modal__form-label modal__form-label--date" for="date-of-checkin">Дата Заезда:</label>
+                <div class="modal__form-input-wrapper">
+                  <input class="modal__form-input input-reset" type="date" id="date-of-checkin" name="date-of-checkin"
+                    placeholder="27 апреля 2020" required>
+                  <span class="modal__form-input-message modal__form-input-message--alert">
+                    Мы не можем отправить вас в прошлое.
                   </span>
                 </div>
-                <div class="modal__form-counter-wrapper">
-                  <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
-                    type="button">
-                    <span class="visually-hidden">Уменьшить количество</span>
-                  </button>
-                  <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
-                    value="2" id="count-of-children" name="count-of-children">
-                  <button class="modal__form-counter-button modal__form-counter-button--add button-reset" type="button">
-                    <span class="visually-hidden">Увеличить количество</span>
-                    <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
-                    </svg>
-                  </button>
+              </div>
+              <div class="modal__form-date-line-wrapper">
+                <label class="modal__form-label modal__form-label--date" for="date-of-checkout">Дата Выезда:</label>
+                <div class="modal__form-input-wrapper">
+                  <input class="modal__form-input input-reset" type="date" id="date-of-checkout" name="date-of-checkout"
+                    placeholder="1 сентября 2021" required>
+                  <span class="modal__form-input-message">
+                    На эти даты есть свободные номера. Пока есть.
+                  </span>
+                </div>
+              </div>
+              <div class="modal__form-box">
+                <div class="modal__line-wrapper">
+                  <div class="modal__label-wrapper">
+                    <label class="modal__form-label" for="count-of-adult">Взрослые:</label>
+                  </div>
+                  <div class="modal__form-counter-wrapper">
+                    <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
+                      type="button">
+                      <span class="visually-hidden">Уменьшить количество</span>
+                    </button>
+                    <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
+                      value="2" id="count-of-adult" name="count-of-adult">
+                    <button class="modal__form-counter-button modal__form-counter-button--add button-reset"
+                      type="button">
+                      <span class="visually-hidden">Увеличить количество</span>
+                      <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal__line-wrapper">
+                  <div class="modal__label-wrapper">
+                    <label class="modal__form-label" for="count-of-children">
+                      Дети:
+                    </label>
+                    <span class="modal__tooltip">
+                      <button class="modal__toopltip-button button-reset" type="button"
+                        aria-labelledby="tooltip-content">
+                        <svg class="modal__toopltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
+                        </svg>
+                      </button>
+                      <span class="modal__tooltip-content" role="tooltip" id="tooltip-content">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                        размещаются бесплатно.
+                      </span>
+                    </span>
+                  </div>
+                  <div class="modal__form-counter-wrapper">
+                    <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
+                      type="button">
+                      <span class="visually-hidden">Уменьшить количество</span>
+                    </button>
+                    <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
+                      value="2" id="count-of-children" name="count-of-children">
+                    <button class="modal__form-counter-button modal__form-counter-button--add button-reset"
+                      type="button">
+                      <span class="visually-hidden">Увеличить количество</span>
+                      <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
