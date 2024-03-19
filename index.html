@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона | Главная</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -170,7 +171,7 @@
             </p>
             <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email">Ваш e-mail</label>
-              <input class="subscribe__input input-reset" type="email" placeholder="Ваш e-mail" id="email" required>
+              <input class="subscribe__input input-reset" type="email" placeholder="Ваш e-mail" id="email" name="email" required>
               <button class="subscribe__button button button-reset" type="submit">Подписаться</button>
             </form>
           </div>
@@ -180,7 +181,8 @@
         <address class="footer__social">
           <ul class="footer__social-list list-reset">
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">Наша группа во Вконтакте</span>
                 <svg class="footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="25" height="15">
@@ -201,7 +203,8 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+              <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">Наш ютуб-канал</span>
                 <svg class="footer__social-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="23" height="18">
@@ -220,6 +223,92 @@
           </svg>
         </a>
       </footer>
+      <section class="modal">
+        <div class="modal__wrapper">
+          <h2 class="modal__title section-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal__close-button button-reset">
+            <span class="visually-hidden">Закрыть модальное окно</span>
+            <svg class="modal__close-button-icon" width="14" height="14" viewBox="0 0 14 14"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" />
+            </svg>
+          </button>
+          <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+            <label class="modal__form-label modal__form-label--date">
+              Дата Заезда:
+              <div class="modal__form-input-wrapper">
+                <input class="modal__form-input input-reset" type="date" name="date-of-checkin" placeholder="27 апреля 2020" required>
+                <span class="modal__form-input-message modal__form-input-message--alert">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            </label>
+            <label class="modal__form-label modal__form-label--date">
+              Дата Выезда:
+              <div class="modal__form-input-wrapper">
+                <input class="modal__form-input input-reset" type="date" name="date-of-checkout" placeholder="1 сентября 2021" required>
+                <span class="modal__form-input-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+            </label>
+            <div class="modal__form-box">
+              <div class="modal__line-wrapper">
+                <div class="modal__label-wrapper">
+                  <label class="modal__form-label" for="count-of-adult">Взрослые:</label>
+                </div>
+                <div class="modal__form-counter-wrapper">
+                  <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
+                    type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
+                    value="2" id="count-of-adult" name="count-of-adult">
+                  <button class="modal__form-counter-button modal__form-counter-button--add button-reset" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                    <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="modal__line-wrapper">
+                <div class="modal__label-wrapper">
+                  <label class="modal__form-label" for="count-of-children">
+                    Дети:
+                  </label>
+                  <span class="modal__tooltip">
+                    <button class="modal__toopltip-button button-reset" type="button" aria-labelledby="tooltip-content">
+                      <svg class="modal__toopltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white" />
+                      </svg>
+                    </button>
+                    <span class="modal__tooltip-content" role="tooltip" id="tooltip-content">
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                      размещаются бесплатно.
+                    </span>
+                  </span>
+                </div>
+                <div class="modal__form-counter-wrapper">
+                  <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
+                    type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <input class="modal__form-input modal__form-counter-input input-reset" type="number" placeholder="2"
+                    value="2" id="count-of-children" name="count-of-children">
+                  <button class="modal__form-counter-button modal__form-counter-button--add button-reset" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                    <svg class="modal__form-counter-button-icon" width="14" height="14" viewBox="0 0 14 14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="modal__form-button button button-reset" type="submit">Найти</button>
+          </form>
+        </div>
+      </section>
     </div>
   </body>
 
