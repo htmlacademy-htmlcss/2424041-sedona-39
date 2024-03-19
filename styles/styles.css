@@ -1375,7 +1375,7 @@ img {
   background-color: var(--color-background-80);
   z-index: 10;
 
-  /* display: none; */
+  display: none;
 }
 
 .modal__title {
