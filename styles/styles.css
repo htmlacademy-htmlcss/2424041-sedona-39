@@ -1421,6 +1421,7 @@ img {
 
 .modal__close-button-icon {
   fill: var(--color-basic);
+  transition: fill 0.3s;
 }
 
 .modal__close-button:hover {
