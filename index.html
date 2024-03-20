@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона | Главная</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -17,6 +18,7 @@
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" width="140" height="70" alt="Логотип Sedona">
           </a>
+
           <ul class="nav__pages list-reset">
             <li class="nav__pages-item">
               <a class="nav__link nav__link--active link-reset">Главная</a>
@@ -28,6 +30,7 @@
               <a class="nav__link link-reset" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
+
           <ul class="nav__user list-reset">
             <li class="nav__user-item">
               <a class="nav__button nav__button--search" href="#">
@@ -51,17 +54,20 @@
               </a>
             </li>
           </ul>
+
           <div class="nav__modal-link-wrapper">
             <a class="nav__modal-link button link-button link-reset" href="#">Хочу сюда!</a>
           </div>
         </nav>
       </header>
+
       <main class="main-container">
         <section class="hero section">
           <h1 class="visually-hidden">Сайт об отдыхе в городе Седона.</h1>
           <img class="hero__title" src="images/welcome.svg" width="458" height="352" lang="en"
             alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
         </section>
+
         <section class="advantages section">
           <div class="advantages__box">
             <h2 class="advantages__title section-title">
@@ -122,6 +128,7 @@
             </li>
           </ul>
         </section>
+
         <section class="services section">
           <div class="services__box">
             <h2 class="services__title section-title">
@@ -163,6 +170,7 @@
             <a class="services__link button link-button link-reset" href="catalog.html">Поиск гостиницы в Седоне</a>
           </div>
         </section>
+
         <section class="subscribe section">
           <div class="subscribe__wrapper">
             <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
@@ -178,6 +186,7 @@
           </div>
         </section>
       </main>
+
       <footer class="footer section">
         <address class="footer__social">
           <ul class="footer__social-list list-reset">
@@ -215,8 +224,10 @@
               </a>
             </li>
           </ul>
+
           <a class="footer__phone link-reset" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
+
         <a class="footer__dev-logo" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
           <svg class="footer__dev-logo-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34">
             <path
@@ -224,9 +235,11 @@
           </svg>
         </a>
       </footer>
-      <section class="modal">
+
+      <section class="modal modal--active">
         <div class="modal__wrapper">
           <h2 class="modal__title section-title">Поиск гостиницы в Седоне</h2>
+
           <button class="modal__close-button button-reset">
             <span class="visually-hidden">Закрыть модальное окно</span>
             <svg class="modal__close-button-icon" width="14" height="14" viewBox="0 0 14 14"
@@ -235,29 +248,31 @@
                 d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" />
             </svg>
           </button>
+
           <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
             <div class="modal__form-inner">
-              <div class="modal__form-date-line-wrapper">
-                <label class="modal__form-label modal__form-label--date" for="date-of-checkin">Дата Заезда:</label>
-                <div class="modal__form-input-wrapper">
-                  <input class="modal__form-input input-reset" type="date" id="date-of-checkin" name="date-of-checkin"
-                    placeholder="27 апреля 2020" required>
-                  <span class="modal__form-input-message modal__form-input-message--alert">
-                    Мы не можем отправить вас в прошлое.
-                  </span>
-                </div>
-              </div>
-              <div class="modal__form-date-line-wrapper">
-                <label class="modal__form-label modal__form-label--date" for="date-of-checkout">Дата Выезда:</label>
-                <div class="modal__form-input-wrapper">
-                  <input class="modal__form-input input-reset" type="date" id="date-of-checkout" name="date-of-checkout"
-                    placeholder="1 сентября 2021" required>
-                  <span class="modal__form-input-message">
-                    На эти даты есть свободные номера. Пока есть.
-                  </span>
-                </div>
-              </div>
-              <div class="modal__form-box">
+              <label class="modal__form-label modal__form-label--checkin-date" for="date-of-checkin">Дата
+                Заезда:</label>
+
+              <input class="modal__form-input modal__form-input--date modal__form-input--checkin input-reset"
+                type="text" id="date-of-checkin" name="date-of-checkin" placeholder="27 апреля 2020" required>
+
+              <span
+                class="modal__form-input-message modal__form-input-checkin-message modal__form-input-message--alert">
+                Мы не можем отправить вас в прошлое.
+              </span>
+
+              <label class="modal__form-label modal__form-label--checkout-date" for="date-of-checkout">Дата
+                Выезда:</label>
+
+              <input class="modal__form-input modal__form-input--date modal__form-input--checkout input-reset"
+                type="text" id="date-of-checkout" name="date-of-checkout" placeholder="1 сентября 2021" required>
+
+              <span class="modal__form-input-message modal__form-input-checkout-message">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+
+              <div class="modal__box">
                 <div class="modal__line-wrapper">
                   <div class="modal__label-wrapper">
                     <label class="modal__form-label" for="count-of-adult">Взрослые:</label>
@@ -317,6 +332,7 @@
                 </div>
               </div>
             </div>
+
             <button class="modal__form-button button button-reset" type="submit">Найти</button>
           </form>
         </div>

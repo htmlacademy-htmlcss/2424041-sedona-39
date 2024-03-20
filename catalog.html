@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона | Каталог</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -17,6 +18,7 @@
           <a class="logo" href="index.html">
             <img class="logo__img" src="images/logo.svg" width="140" height="70" alt="Логотип Sedona">
           </a>
+
           <ul class="nav__pages list-reset">
             <li class="nav__pages-item">
               <a class="nav__link link-reset" href="index.html">Главная</a>
@@ -28,6 +30,7 @@
               <a class="nav__link nav__link--active link-reset">Гостиницы</a>
             </li>
           </ul>
+
           <ul class="nav__user list-reset">
             <li class="nav__user-item">
               <a class="nav__button nav__button--search" href="#">
@@ -51,15 +54,18 @@
               </a>
             </li>
           </ul>
+
           <div class="nav__modal-link-wrapper">
             <a class="nav__modal-link button link-button link-reset" href="#">Хочу сюда!</a>
           </div>
         </nav>
       </header>
+
       <main class="main-container">
         <section class="filter">
           <header class="filter__header">
             <h1 class="filter__title">Гостиницы Седоны</h1>
+
             <nav class="breadcrumbs">
               <ul class="breadcrumbs__list list-reset">
                 <li class="breadcrumbs__item">
@@ -78,6 +84,7 @@
               </ul>
             </nav>
           </header>
+
           <form class="filter__wrapper" method="get" action="https://echo.htmlacademy.ru">
             <div class="filter__column">
               <fieldset class="filter__infrastructure fieldset-reset">
@@ -100,6 +107,7 @@
                   </li>
                 </ul>
               </fieldset>
+
               <fieldset class="filter__type-of-housing fieldset-reset">
                 <legend class="filter__options-title">Тип Жилья:</legend>
                 <ul class="filter__list list-reset">
@@ -121,6 +129,7 @@
                 </ul>
               </fieldset>
             </div>
+
             <div class="filter__column">
               <fieldset class="filter__price fieldset-reset">
                 <legend class="filter__options-title">Стоимость, ₽:</legend>
@@ -147,6 +156,7 @@
                   </div>
                 </div>
               </fieldset>
+
               <ul class="filter__buttons list-reset">
                 <li class="filter__buttons-item">
                   <button class="filter__button filter__button--form-app button button-reset"
@@ -160,6 +170,7 @@
             </div>
           </form>
         </section>
+
         <section class="catalog">
           <header class="catalog__header">
             <h2 class="catalog__title section-title">Найдено гостиниц: 38</h2>
@@ -189,6 +200,7 @@
               </li>
             </ul>
           </header>
+
           <section class="catalog__cards">
             <h2 class="visually-hidden">Список найденых результатов</h2>
             <ul class="catalog__cards-list list-reset">
@@ -297,6 +309,7 @@
               </li>
             </ul>
           </section>
+
           <footer class="catalog__footer">
             <ul class="catalog__pagination list-reset">
               <li class="catalog__pagination-item">
@@ -320,12 +333,15 @@
             </ul>
           </footer>
         </section>
+
         <section class="subscribe subscribe--background-white section">
           <div class="subscribe__wrapper">
             <h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
+
             <p class="subscribe__text main-text">
               Только полезная информация и никакого спама,<br> честное бойскаутское!
             </p>
+
             <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email">Ваш e-mail</label>
               <input class="subscribe__input input-reset" type="email" placeholder="Ваш e-mail" id="email" name="email"
@@ -335,6 +351,7 @@
           </div>
         </section>
       </main>
+
       <footer class="footer section">
         <address class="footer__social">
           <ul class="footer__social-list list-reset">
@@ -372,8 +389,10 @@
               </a>
             </li>
           </ul>
+
           <a class="footer__phone link-reset" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
+
         <a class="footer__dev-logo" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
           <svg class="footer__dev-logo-icon" xmlns="http://www.w3.org/2000/svg" width="115" height="34">
             <path
@@ -381,9 +400,11 @@
           </svg>
         </a>
       </footer>
-      <section class="modal">
+
+      <section class="modal modal--active">
         <div class="modal__wrapper">
           <h2 class="modal__title section-title">Поиск гостиницы в Седоне</h2>
+
           <button class="modal__close-button button-reset">
             <span class="visually-hidden">Закрыть модальное окно</span>
             <svg class="modal__close-button-icon" width="14" height="14" viewBox="0 0 14 14"
@@ -392,33 +413,36 @@
                 d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" />
             </svg>
           </button>
+
           <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
             <div class="modal__form-inner">
-              <div class="modal__form-date-line-wrapper">
-                <label class="modal__form-label modal__form-label--date" for="date-of-checkin">Дата Заезда:</label>
-                <div class="modal__form-input-wrapper">
-                  <input class="modal__form-input input-reset" type="date" id="date-of-checkin" name="date-of-checkin"
-                    placeholder="27 апреля 2020" required>
-                  <span class="modal__form-input-message modal__form-input-message--alert">
-                    Мы не можем отправить вас в прошлое.
-                  </span>
-                </div>
-              </div>
-              <div class="modal__form-date-line-wrapper">
-                <label class="modal__form-label modal__form-label--date" for="date-of-checkout">Дата Выезда:</label>
-                <div class="modal__form-input-wrapper">
-                  <input class="modal__form-input input-reset" type="date" id="date-of-checkout" name="date-of-checkout"
-                    placeholder="1 сентября 2021" required>
-                  <span class="modal__form-input-message">
-                    На эти даты есть свободные номера. Пока есть.
-                  </span>
-                </div>
-              </div>
-              <div class="modal__form-box">
+              <label class="modal__form-label modal__form-label--checkin-date" for="date-of-checkin">Дата
+                Заезда:</label>
+
+              <input class="modal__form-input modal__form-input--date modal__form-input--checkin input-reset"
+                type="text" id="date-of-checkin" name="date-of-checkin" placeholder="27 апреля 2020" required>
+
+              <span
+                class="modal__form-input-message modal__form-input-checkin-message modal__form-input-message--alert">
+                Мы не можем отправить вас в прошлое.
+              </span>
+
+              <label class="modal__form-label modal__form-label--checkout-date" for="date-of-checkout">Дата
+                Выезда:</label>
+
+              <input class="modal__form-input modal__form-input--date modal__form-input--checkout input-reset"
+                type="text" id="date-of-checkout" name="date-of-checkout" placeholder="1 сентября 2021" required>
+
+              <span class="modal__form-input-message modal__form-input-checkout-message">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+
+              <div class="modal__box">
                 <div class="modal__line-wrapper">
                   <div class="modal__label-wrapper">
                     <label class="modal__form-label" for="count-of-adult">Взрослые:</label>
                   </div>
+
                   <div class="modal__form-counter-wrapper">
                     <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
                       type="button">
@@ -436,11 +460,13 @@
                     </button>
                   </div>
                 </div>
+
                 <div class="modal__line-wrapper">
                   <div class="modal__label-wrapper">
                     <label class="modal__form-label" for="count-of-children">
                       Дети:
                     </label>
+
                     <span class="modal__tooltip">
                       <button class="modal__toopltip-button button-reset" type="button"
                         aria-labelledby="tooltip-content">
@@ -455,6 +481,7 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="modal__form-counter-wrapper">
                     <button class="modal__form-counter-button modal__form-counter-button--remove button-reset"
                       type="button">
