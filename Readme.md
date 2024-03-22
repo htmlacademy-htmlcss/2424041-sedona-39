@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Джемал Маранели](https://up.htmlacademy.ru/htmlcss/39/user/2424041).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зайцев](https://htmlacademy.ru/profile/ozi).
+* Сайт: [Мой проект Седона](https://dzhemal-maraneli.github.io/2424041-sedona-39/).
 
 ---
 
