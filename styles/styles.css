@@ -838,6 +838,14 @@ img {
   background-color: var(--color-input-basic);
 }
 
+.filter__input:disabled + .filter__label {
+  opacity: 0.3;
+}
+
+.filter__input:disabled + .filter__label:hover {
+  opacity: 0.3;
+}
+
 .filter__input:focus + .filter__label::before {
   outline: 3px solid var(--color-blue);
 }
@@ -933,15 +941,15 @@ img {
 }
 
 .filter__price-range-pin:hover {
-  background-color: var(--color-input-third);
+  box-shadow: 0 4px 10px 0 var(--color-basic-30);
 }
 
 .filter__price-range-pin:focus {
-  background-color: var(--color-input-third);
+  box-shadow: 0 4px 10px 0 var(--color-basic-30);
 }
 
 .filter__price-range-pin:active {
-  background-color: var(--color-blue);
+  box-shadow: 0 7px 15px 0 var(--color-basic-30);
 }
 
 .filter__buttons {
