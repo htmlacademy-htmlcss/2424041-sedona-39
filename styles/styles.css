@@ -876,6 +876,7 @@ img {
 
 .filter__price-input::-moz-placeholder {
   color: var(--color-basic);
+  opacity: 1;
 }
 
 .filter__price-input::placeholder {
